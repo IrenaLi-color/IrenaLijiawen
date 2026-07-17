@@ -18,7 +18,6 @@ const stories = {
       "campus-06.png",
       "campus-07.jpeg",
       "campus-08.jpeg",
-      "campus-09.jpeg",
       "campus-10.jpeg"
     ]
   },
