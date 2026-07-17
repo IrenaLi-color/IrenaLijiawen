@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="李佳文的个人主页">
+    <title>李佳文 | 个人主页</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#profile">跳到主页</a>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__inner">
+          <button class="portrait-button" id="portraitButton" type="button" aria-expanded="false" aria-controls="heroActions">
+            <img src="assets/images/hero-portrait.png" alt="李佳文的黑白人像照片">
+          </button>
+
+          <div class="hero-actions" id="heroActions" aria-label="入口选项">
+            <button class="action-button" type="button" data-show-profile>了解我</button>
+            <button class="action-button action-button--muted" type="button" data-open-contact>联系我</button>
+          </div>
+
+          <p class="hero__greeting" id="hero-title">hi！我是李佳文</p>
+        </div>
+      </section>
+
+      <section class="profile" id="profile" aria-labelledby="profile-title" hidden>
+        <div class="section-shell">
+          <div class="profile__intro">
+            <p class="eyebrow">Profile</p>
+            <h1 id="profile-title">李佳文</h1>
+            <p class="profile__summary">
+              你好，我是李佳文，暨南大学汉语言文字学硕士，川大汉语言文学本科。曾获一等奖学金、优秀学生干部等荣誉，参与省级大创、挑战杯，具备媒体采编、校园运营、内容策划与品牌传播经验。
+            </p>
+            <button class="primary-button" type="button" id="moreButton" aria-expanded="false" aria-controls="storyCards">
+              了解更多
+            </button>
+          </div>
+        </div>
+
+        <div class="story-cards" id="storyCards" aria-label="更多经历">
+          <button class="story-card" type="button" data-story="campus">
+            <span>在校经历</span>
+            <small>组织、研究与校园服务</small>
+          </button>
+          <button class="story-card" type="button" data-story="practice">
+            <span>实习实践</span>
+            <small>媒体、品牌与公益传播</small>
+          </button>
+          <button class="story-card" type="button" data-story="life">
+            <span>个人生活</span>
+            <small>旅行、摄影与持续创作</small>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal" id="contactModal" aria-hidden="true">
+      <div class="modal__backdrop" data-close-modal></div>
+      <section class="modal__panel modal__panel--compact" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+        <button class="icon-button" type="button" data-close-modal aria-label="关闭联系窗口">×</button>
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-modal-title">联系我</h2>
+        <dl class="modal-contact">
+          <div>
+            <dt>Email</dt>
+            <dd><span>2363963685</span><span>【艾特】</span><span>qq</span><span>【点】</span><span>com</span></dd>
+          </div>
+          <div>
+            <dt>电话</dt>
+            <dd><span>139</span><span> 5464 </span><span>2368</span></dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+
+    <div class="modal" id="storyModal" aria-hidden="true">
+      <div class="modal__backdrop" data-close-modal></div>
+      <section class="modal__panel modal__panel--wide" role="dialog" aria-modal="true" aria-labelledby="storyModalTitle">
+        <button class="icon-button" type="button" data-close-modal aria-label="关闭详情窗口">×</button>
+        <p class="eyebrow" id="storyModalKicker"></p>
+        <h2 id="storyModalTitle"></h2>
+        <div class="story-copy" id="storyModalCopy"></div>
+        <div class="image-gallery" id="storyModalGallery" aria-label="相关图片"></div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
